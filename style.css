@@ -70,13 +70,13 @@ nav ul li a {
 .hero-content h2 {
   font-size: 50px;
   margin-bottom: 20px;
-  opacity: 0;
+  opacity: 1;
   color: white; /* 文字色を白にする */
   }
 
 .hero-content p {
   font-size: 20px;
-  opacity: 0;
+  opacity: 1;
   color: white; /* 文字色を白にする */
 }
 
