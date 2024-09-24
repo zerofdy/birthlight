@@ -1,193 +1,100 @@
-/* 基本的なスタイル */
-body {
-  font-family: sans-serif;
+/* Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #111;
+  overflow-x: hidden;
 }
 
-
-/* ヘッダー */
+/* Header */
 header {
-  background-color: #f0f0f0;
-  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 }
 
+.logo {
+  font-size: 24px;
+  color: #fff;
+}
 
 nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: right;
+  display: flex;
 }
 
-
-nav li {
-  display: inline-block;
+nav ul li {
   margin-left: 20px;
 }
 
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
 
-/* heroセクション */
 .hero {
-  position: relative;
-  height: 500px;
-  overflow: hidden;
+  height: 100vh;
+  background: url('hero-background.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-
-#myVideo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
 
 .hero-content {
-  position: relative;
   text-align: center;
-  padding: 100px 0;
-  z-index: 1;
 }
 
-
-.hero h2 {
-  font-size: 3em;
+.hero-content h2 {
+  font-size: 50px;
   margin-bottom: 20px;
-  color: #fff;
-}
-
-
-.hero p {
-  color: #fff;
-}
-
-
-.cta {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #f00;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  cursor: poin   ter;
-}
-
-
-/* servicesセクション */
-.services {
-  padding: 50px 0;
-}
-
-
-.service-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-
-.service {
-  width: 30%;
-  text-align: center;
-}
-
-
-.service img {
-  max-width: 100%;
-  height: auto;
-  transition: transform 0.3s ease; /* ホバーエフェクトのためのトランジション */
-}
-
-
-.service img:hover {
-  transform: scale(1.1); /* ホバー時に画像を少し拡大 */
-}
-
-
-/* parallaxセクション */
-.parallax {
-  height: 400px;
-  background-image: url("parallax.jpg");
-  /* 画像ファイルのパスは適宜変更してください */
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-}
-
-
-.parallax-inner {
-  text-align: center;
-  padding: 150px 0;
-  color: #fff;
-}
-
-
-/* フッター */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
-
-
-/* アニメーション */
-.fade-in {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-
-.fade-in.is-visible {
-  opacity: 1;
-  transform: transl   ateY(0);
+.hero-content p {
+  font-size: 20px;
+  opacity: 0;
 }
 
-
-/* モーダルウィンドウ */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+.parallax {
+  height: 80vh;
+  position: relative;
+  background: #333;
 }
 
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 60%;
+.parallax-layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: #fff;
 }
 
-
-.close-button {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.content {
+  padding: 100px 0;
+  background-color: #222;
+  text-align: center;
 }
 
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
 
-.close-button:hover,
-.close-button:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+footer {
+  background-color: #000;
+  text-align: center;
+  padding: 20px 0;
 }

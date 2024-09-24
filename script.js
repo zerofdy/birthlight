@@ -1,38 +1,17 @@
-// モーダルウィンドウ
-const modal = document.getElementById('modal');
-const openModalButton = document.getElementById('openModal');
-const closeModalButton = document.querySelect   or('.close-button');
-
-
-openModalButton.addEventListener('click', () => {
-  modal.style.display = 'block';
+// GSAPを使ってアニメーションを制御
+window.addEventListener("load", function () {
+  gsap.from(".hero-content h2", { duration: 1, y: 50, opacity: 0 });
+  gsap.from(".hero-content p", { duration: 1.5, y: 50, opacity: 0, delay: 0.5 });
 });
 
+// パララックス効果を実装
+document.addEventListener("scroll", function () {
+  const scrollTop = window.pageYOffset;
+  const parallaxLayers = document.querySelectorAll(".parallax-layer");
 
-closeModalButton.addEventListener('click', () => {
-  modal.style.dis   play = 'none';
-});
-
-
-window.addEventListener('click', (event) => {
-  if (event.target == modal) {
-    modal.style.di   splay = 'none';
-  }
-});
-
-
-// フェードインアニメーション
-function fadeInElements() {
-  const elements = document.querySelectorAll('.fade-in');
-  elements.forEach((element) => {
-    const elementTop = element.getBou   ndingClientRect().top;
-    const windowHeight = window.innerHeight;
-    if (elementTop < windowHeight) {
-      element.classList.add   ('is-visible');
-    }
+  parallaxLayers.forEach(function (layer) {
+    const speed = layer.getAttribute("data-speed");
+    const yPos = -(scrollTop * speed);
+    layer.style.transform = `translateY(${yPos}px)`;
   });
-}
-
-
-window.addEventListener('scroll', fadeInElements);
-fadeInElements(); // 初期表示時のアニメーション
+});

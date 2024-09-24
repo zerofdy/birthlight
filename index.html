@@ -3,78 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>夢を応援する会社</title>
+  <title>インタラクティブなサイト</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
 <body>
 
+  <!-- ヘッダー -->
   <header>
     <div class="container">
-      <h1>会社名</h1>
+      <h1 class="logo">My Studio</h1>
       <nav>
         <ul>
-          <li><a href="#">サービス紹介</a></li>
-          <li><a href="#">パフォーマー紹介</a></li>
-          <li><a href="#">お問い合わせ</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- ヒーローセクション -->
   <section class="hero">
-    <div class="container">
-      <video autoplay muted loop id="myVideo">
-        <source src="sample.mp4" type="video/mp4">
-      </video>
-      <div class="hero-content">
-        <h2 class="fade-in">夢を応援します</h2>
-        <p class="fade-in">私たちは、才能と魅力にあふれたパフォーマーが、<br>夢を実現できるよう、様々なチャンネルを通じてサポートします。</p>
-        <button class="cta fade-in" id="openModal">詳しくはこちら</button>
-      </div>
+    <div class="hero-content">
+      <h2>Welcome to the Future</h2>
+      <p>Experience the next level of web design</p>
     </div>
   </section>
 
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close-button">&times;</span>
-      <h2>サービス詳細</h2>
-      <p>ここにサービスの詳細説明が入ります。</p>
-    </div>
-  </div>
-
-  <section class="services">
-    <div class="container">
-      <h2 class="fade-in">サービス紹介</h2>
-      <div class="service-list">
-        <div class="service fade-in">
-          <img src="service1.jpg" alt="サービス1" class="hover-effect">
-          <h3>パフォーマー育成プログラム</h3>
-          <p>あなたの才能を最大限に引き出す、個別指導型の育成プログラムです。</p>
-        </div>
-        <div class="service fade-in">
-          <img src="service2.jpg" alt="サービス2" class="hover-effect">
-          <h3>ビジネスコンサルティング</h3>
-          <p>あなたの活動をビジネスとして成功させるための、コンサルティングサービスです。</p>
-        </div>
-        <div class="service fade-in">
-          <img src="service3.jpg" alt="サービス3" class="hover-effect">
-          <h3>イベント企画</h3>
-          <p>あなたのパフォーマンスを披露する場を提供する、イベント企画サービスです。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- パララックスセクション -->
   <section class="parallax">
-    <div class="parallax-inner">
-      <h2 class="fade-in">夢に向かって、共に歩む</h2>
+    <div class="parallax-layer" data-speed="0.5">
+      <h2>Scroll Down to Explore</h2>
+    </div>
+  </section>
+
+  <!-- コンテンツセクション -->
+  <section class="content">
+    <div class="container">
+      <h2>Our Services</h2>
+      <p>We provide top-notch web development services to bring your ideas to life.</p>
     </div>
   </section>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2023 会社名</p>
-    </div>
+    <p>&copy; 2023 My Studio</p>
   </footer>
 
   <script src="script.js"></script>
