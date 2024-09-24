@@ -30,7 +30,7 @@ header {
 }
 
 .logo img {
-  width: 50px; /* ロゴ画像の幅 */
+  width: 150px; /* ロゴ画像の幅 */
   margin-right: 10px; /* 画像とテキストの間にスペースを作る */
 }
 
