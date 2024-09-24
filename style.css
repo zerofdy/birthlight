@@ -70,9 +70,12 @@ nav ul li a {
 }
 
 .parallax {
-  height: 80vh;
+  height: 80vh; /* セクションの高さ */
+  background-image: url('parallax-background.jpg'); /* 背景画像 */
+  background-attachment: fixed; /* 背景を固定して視差効果を作る */
+  background-position: center;
+  background-size: cover;
   position: relative;
-  background: #333;
 }
 
 .parallax-layer {
