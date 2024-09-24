@@ -25,8 +25,18 @@ header {
 }
 
 .logo {
-  font-size: 24px;
-  color: #fff;
+  display: flex; /* 画像とテキストを横並びに */
+  align-items: center; /* 画像とテキストの縦方向の位置を揃える */
+}
+
+.logo img {
+  width: 50px; /* ロゴ画像の幅 */
+  margin-right: 10px; /* 画像とテキストの間にスペースを作る */
+}
+
+.logo span {
+  font-size: 24px; /* テキストのサイズ */
+  color: #000; /* テキストの色 */
 }
 
 nav ul {
