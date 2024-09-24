@@ -1,0 +1,193 @@
+/* 基本的なスタイル */
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+/* ヘッダー */
+header {
+  background-color: #f0f0f0;
+  padding: 20px 0;
+}
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+
+nav li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+
+/* heroセクション */
+.hero {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+
+#myVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  padding: 100px 0;
+  z-index: 1;
+}
+
+
+.hero h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+
+.hero p {
+  color: #fff;
+}
+
+
+.cta {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f00;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: poin   ter;
+}
+
+
+/* servicesセクション */
+.services {
+  padding: 50px 0;
+}
+
+
+.service-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.service {
+  width: 30%;
+  text-align: center;
+}
+
+
+.service img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; /* ホバーエフェクトのためのトランジション */
+}
+
+
+.service img:hover {
+  transform: scale(1.1); /* ホバー時に画像を少し拡大 */
+}
+
+
+/* parallaxセクション */
+.parallax {
+  height: 400px;
+  background-image: url("parallax.jpg");
+  /* 画像ファイルのパスは適宜変更してください */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+.parallax-inner {
+  text-align: center;
+  padding: 150px 0;
+  color: #fff;
+}
+
+
+/* フッター */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+/* アニメーション */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+.fade-in.is-visible {
+  opacity: 1;
+  transform: transl   ateY(0);
+}
+
+
+/* モーダルウィンドウ */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
