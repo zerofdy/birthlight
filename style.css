@@ -31,6 +31,7 @@ header {
 
 .logo img {
   width: 150px; /* ロゴ画像の幅 */
+  height: auto;
   margin-right: 10px; /* 画像とテキストの間にスペースを作る */
 }
 
