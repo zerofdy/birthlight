@@ -1,7 +1,7 @@
 // GSAPを使ってアニメーションを制御
 window.addEventListener("load", function () {
-  gsap.from(".hero-content h2", { duration: 1, y: 50, opacity: 0 });
-  gsap.from(".hero-content p", { duration: 1.5, y: 50, opacity: 0, delay: 0.5 });
+  gsap.from(".hero-content h2", { duration: 1, y: 50, opacity: 1 });
+  gsap.from(".hero-content p", { duration: 1.5, y: 50, opacity: 1, delay: 0.5 });
 });
 
 // パララックス効果を実装
