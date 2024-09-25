@@ -96,7 +96,8 @@ nav ul li a {
 .hero-content {
   margin-bottom: auto;  /* テキストを上部に固定 */
   text-align: center;
-  padding-top: 100px;  /* テキストの上部に余白を追加 */
+  padding-top: 100px;  /* ヘッダー分の余白 */
+  padding-bottom: 80px;  /* テキストと画像の間にスペースを追加 */
 }
 
 
