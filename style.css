@@ -25,45 +25,49 @@ header {
   z-index: 100;
 }
 
+/* Container styling */
+.headcontainer {
+  display: flex;
+  justify-content: space-between; /* ロゴとナビゲーションを左右に分ける */
+  align-items: center; /* 縦方向に中央揃え */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 /* ロゴとテキスト */
 .logo {
-  display: flex; /* 画像とテキストを横並びに */
-  align-items: center; /* 縦方向の位置を中央に揃える */
+  display: flex; /* ロゴとテキストを横並びに */
+  align-items: center; /* 縦方向の位置を中央揃え */
 }
 
 .logo img {
-  width: 200px; /* ロゴ画像の幅 */
+  width: 120px; /* ロゴ画像の幅を調整 */
   height: auto;
-  margin-right: 10px; /* 画像とテキストの間にスペースを作る */
+  margin-right: 10px; /* ロゴとテキストの間にスペース */
 }
 
-.logo span {
-  font-size: 24px; /* テキストのサイズ */
-  color: #000; /* テキストの色 */
-  margin-right: 30px; /* ロゴとナビゲーションの間の余白 */
+.logo {
+  font-size: 28px; /* テキストのサイズを調整 */
+  color: #000;
 }
 
-/* ナビゲーション */
-nav {
-  display: flex;
-  align-items: center; /* メニューアイテムを縦方向に中央揃え */
-}
-
+/* ナビゲーションメニュー */
 nav ul {
   list-style: none;
-  display: flex; /* メニューアイテムを横並びに */
+  display: flex; /* ナビゲーションメニューを横並びに */
   margin: 0;
   padding: 0;
 }
 
 nav ul li {
-  margin-left: 20px; /* メニューアイテム同士の余白 */
+  margin-left: 20px; /* 各メニューアイテムに余白を追加 */
 }
 
 nav ul li a {
-  color: #000;
   text-decoration: none;
   font-size: 18px;
+  color: #000;
 }
 
 .hero {
