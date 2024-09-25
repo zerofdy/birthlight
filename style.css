@@ -109,6 +109,17 @@ nav ul li a {
   color: white; /* 文字色を白にする */
 }
 
+.hero img {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease; /* フェードインと少し上からのスライドイン */
+  transform: translateY(30px); /* 少し下から表示される動き */
+}
+
+.hero.visible img {
+  opacity: 1;
+  transform: translateY(0); /* 元の位置に戻る */
+}
+
 .parallax {
   height: 30vh; /* セクションの高さ */
   background-image: url('parallax-background.jpg'); /* 背景画像 */

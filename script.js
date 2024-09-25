@@ -73,5 +73,17 @@ document.addEventListener("scroll", function () {
       document.querySelector("header").style.background = `linear-gradient(to right, rgb(${startColorDay.join(",")}), rgb(${endColorDay.join(",")}))`; // ヘッダーの色も初期値に戻す
     }
   }
+  
+  const heroSection = document.querySelector('.hero'); // Heroセクションを取得
+  const scrollPosition = window.scrollY + window.innerHeight;
+
+  const heroTop = heroSection.offsetTop;
+
+  // Heroセクションがスクロール範囲に入ったら`visible`クラスを追加
+  if (scrollPosition > heroTop + 100) {
+    heroSection.classList.add('visible');
+  } else {
+    heroSection.classList.remove('visible');
+  }
 });
 
