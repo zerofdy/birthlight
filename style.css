@@ -28,7 +28,7 @@ header {
   justify-content: space-between; /* 要素間のスペースを均等に */
   align-items: center; /* 縦方向の位置を揃える */
   padding: 20px;
-  background-color: #fffff0;
+  background-color: #feb47b;
   position: fixed;
   width: 100%;
   z-index: 100;
