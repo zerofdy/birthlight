@@ -1,17 +1,22 @@
-function getInitialGradientColors() {
-  const bodyStyle = window.getComputedStyle(document.body);
-  const backgroundImage = bodyStyle.backgroundImage;
+// 初期のグラデーションカラーを保存する変数
+let initialGradientColors = null;
 
-  // グラデーションのRGB値を抽出する（例: "rgb(255, 126, 95)" など）
-  const matches = backgroundImage.match(/rgb\((\d+), (\d+), (\d+)\)/g);
-  
-  if (matches && matches.length >= 2) {
-    const startColor = matches[0].match(/\d+/g).map(Number);
-    const endColor = matches[1].match(/\d+/g).map(Number);
-    return { startColor, endColor };
+// 初期のグラデーションカラーを取得して保存する関数
+function getInitialGradientColors() {
+  if (!initialGradientColors) {
+    const bodyStyle = window.getComputedStyle(document.body);
+    const backgroundImage = bodyStyle.backgroundImage;
+
+    // グラデーションのRGB値を抽出する（例: "rgb(255, 126, 95)" など）
+    const matches = backgroundImage.match(/rgb\((\d+), (\d+), (\d+)\)/g);
+
+    if (matches && matches.length >= 2) {
+      const startColor = matches[0].match(/\d+/g).map(Number);
+      const endColor = matches[1].match(/\d+/g).map(Number);
+      initialGradientColors = { startColor, endColor }; // 初期カラーを保存
+    }
   }
-  
-  return null; // 何もマッチしなかった場合
+  return initialGradientColors;
 }
 
 // GSAPを使ってアニメーションを制御
