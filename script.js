@@ -62,9 +62,7 @@ document.addEventListener("scroll", function () {
 
     // スクロールに基づいてbodyのグラデーションを更新
     document.body.style.background = `linear-gradient(315deg, rgb(${redStart}, ${greenStart}, ${blueStart}), rgb(${redEnd}, ${greenEnd}, ${blueEnd}))`;
-
-    // スクロールに基づいてヘッダーの背景色も更新（bodyのスタートカラーを使用）
-    document.querySelector("header").style.backgroundColor = `rgb(${redStart}, ${greenStart}, ${blueStart})`;
+    document.querySelector("header").style.backgroundColor = `linear-gradient(315deg, rgb(${redStart}, ${greenStart}, ${blueStart}), rgb(${redEnd}, ${greenEnd}, ${blueEnd}));
 
     // スクロール位置がトップに戻ったら、初期グラデーションに戻す
     if (scrollPosition === 0) {
