@@ -50,7 +50,7 @@ document.addEventListener("scroll", function () {
 
     // 淡い夜空の色（少し明るめのブルー系）
     let startColorNight = [100, 100, 255]; // 淡いミッドナイトブルー
-    let endColorNight = [140, 120, 255];   // 淡いダークスレートブルー
+    let endColorNight = [25, 25, 112];     // 濃いミッドナイトブルー
 
     // スクロール位置に応じて色を線形補間
     let redStart = Math.floor(startColorDay[0] + (startColorNight[0] - startColorDay[0]) * scrollRatio);
