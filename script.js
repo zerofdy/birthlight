@@ -78,8 +78,7 @@ document.addEventListener("scroll", function () {
   const windowHeight = window.innerHeight;
 
   if (heroTop < windowHeight + 100) {
-    heroImg.style.opacity = '1';
-    heroImg.style.transform = 'translateY(0)';
+    heroImg.classList.add('visible');
   }
 });
 
