@@ -8,8 +8,8 @@
 /* Body */
 body {
   font-family: Arial, sans-serif;
-  color: #fff;
-  background-color: #111;
+  color: #000;
+  background-color: #fffacd;
   overflow-x: hidden;
 }
 
@@ -18,7 +18,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  background-color: #000;
+  background-color: #fffacd;
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -113,4 +113,16 @@ footer {
   background-color: #000;
   text-align: center;
   padding: 20px 0;
+}
+
+.ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
