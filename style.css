@@ -124,7 +124,7 @@ nav ul li a {
 }
 
 .hero.visible img {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(0);  /* スクロールで表示 */
 }
 
