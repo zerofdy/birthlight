@@ -14,7 +14,7 @@
 }
 */
 body {
-  background: linear-gradient(45deg, #ff7e5f, #5EDFFF);
+  background: linear-gradient(45deg, #ff7e5f, #9198e5);
   transition: background 0.5s ease; /* 背景色の変化にアニメーションを加える */
   font-family: Arial, sans-serif;
   color: #000;
@@ -28,7 +28,7 @@ header {
   justify-content: space-between; /* 要素間のスペースを均等に */
   align-items: center; /* 縦方向の位置を揃える */
   padding: 20px;
-  background-color: #feb47b;
+  background-color: #9198e5;
   position: fixed;
   width: 100%;
   z-index: 100;
