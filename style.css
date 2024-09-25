@@ -85,32 +85,47 @@ nav ul li a {
 }
 
 .hero {
-  position: relative;
-  height: 140vh; /* Heroセクションの高さを設定 */
+  display: flex;
+  flex-direction: column;  /* 上下に配置 */
+  justify-content: flex-start;  /* テキストを上に寄せる */
+  align-items: center;  /* 中央に配置 */
+  height: 140vh;  /* Heroセクションの高さを画面いっぱいに */
+  padding-top: 80px; /* ヘッダーの高さ分の余白を追加 */
 }
 
-.hero-text {
-  position: absolute;
-  top: 20px;  /* テキストを上に配置 */
-  left: 50%;
-  transform: translateX(-50%);
+.hero-content {
+  margin-bottom: auto;  /* テキストを上部に固定 */
   text-align: center;
+  padding-top: 100px;  /* テキストの上部に余白を追加 */
+}
+
+
+.hero-content h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  opacity: 1;
+  color: white; /* 文字色を白にする */
+  }
+
+.hero-content p {
+  font-size: 20px;
+  opacity: 1;
+  color: white; /* 文字色を白にする */
 }
 
 .hero img {
-  position: absolute;
-  top: 50%;  /* 画像を中央に配置 */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;  /* 画像の幅を50%に設定 */
-  height: auto;
   opacity: 0;
-  transition: opacity 1s ease, transform 1s ease;
+  transform: translateY(30px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+  margin-top: auto;
 }
 
 .hero.visible img {
-  opacity: 1;  /* 画像をフェードイン */
-  transform: translateY(0);  /* 元の位置に戻す */
+  opacity: 1;
+  transform: translateY(0);  /* スクロールで表示 */
 }
 
 .parallax {

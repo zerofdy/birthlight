@@ -74,16 +74,12 @@ document.addEventListener("scroll", function () {
     }
   }
   
-  const heroSection = document.querySelector('.hero');  // Heroセクションを取得
-  const scrollPosition = window.scrollY + window.innerHeight;
+  const heroTop = heroImg.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
 
-  const heroTop = heroSection.offsetTop;
-
-  // Heroセクションがスクロール範囲に入ったら`visible`クラスを追加
-  if (scrollPosition > heroTop + 100) {
-    heroSection.classList.add('visible');
-  } else {
-    heroSection.classList.remove('visible');
+  if (heroTop < windowHeight - 100) {
+    heroImg.style.opacity = '1';
+    heroImg.style.transform = 'translateY(0)';
   }
 });
 
