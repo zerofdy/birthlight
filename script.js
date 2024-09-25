@@ -51,7 +51,7 @@ document.addEventListener("scroll", function () {
 
     // スクロール位置に応じて色を計算
     let redStart = redStartInitial + (255 - redStartInitial) * scrollRatio;  // 初期値から255に向かって変化
-    let blueEnd = blueEndInitial - (blueEndInitial) * scrollRatio;           // 初期値から0に向かって変化
+    let blueEnd = blueEndInitial - (blueEndInitial * 0.5) * scrollRatio;           // 初期値から0に向かって変化
 
     // スクロールに基づいてグラデーションを更新
     document.body.style.background = `linear-gradient(to right, rgb(${redStart}, ${greenStartInitial}, ${blueStartInitial}), rgb(${redEndInitial}, ${greenEndInitial}, ${blueEnd}))`;
