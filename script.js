@@ -79,7 +79,7 @@ document.addEventListener("scroll", function () {
   const heroTop = heroImg.getBoundingClientRect().top;
   const windowHeight = window.innerHeight;
 
-  if (120 <  window.scrollY) {
+  if (2.0 <  window.scrollY) {
     heroImg.classList.add('visible');
   }
 });
