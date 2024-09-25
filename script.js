@@ -1,3 +1,19 @@
+function getInitialGradientColors() {
+  const bodyStyle = window.getComputedStyle(document.body);
+  const backgroundImage = bodyStyle.backgroundImage;
+
+  // グラデーションのRGB値を抽出する（例: "rgb(255, 126, 95)" など）
+  const matches = backgroundImage.match(/rgb\((\d+), (\d+), (\d+)\)/g);
+  
+  if (matches && matches.length >= 2) {
+    const startColor = matches[0].match(/\d+/g).map(Number);
+    const endColor = matches[1].match(/\d+/g).map(Number);
+    return { startColor, endColor };
+  }
+  
+  return null; // 何もマッチしなかった場合
+}
+
 // GSAPを使ってアニメーションを制御
 window.addEventListener("load", function () {
   gsap.from(".hero-content h2", { duration: 1, y: 50, opacity: 0 });
@@ -15,14 +31,21 @@ document.addEventListener("scroll", function () {
     layer.style.transform = `translateY(${yPos}px)`;
   });
 
-  // ページ全体のスクロール量を取得
-  let scrollPosition = window.scrollY;
+  const gradientColors = getInitialGradientColors();
   
-  // スクロール量に応じて色を変化させる
-  let red = Math.min(255, scrollPosition / 2);
-  let blue = Math.min(255, 255 - scrollPosition / 2);
-  
-  // グラデーションの色を変更
-  document.body.style.background = `linear-gradient(to right, rgb(${red}, 150, ${blue}), rgb(${red}, 200, ${blue}))`;
+  if (gradientColors) {
+    let scrollPosition = window.scrollY;
+
+    // 初期のスタートカラーとエンドカラーを取得
+    let [redStart, greenStart, blueStart] = gradientColors.startColor;
+    let [redEnd, greenEnd, blueEnd] = gradientColors.endColor;
+
+    // スクロール量に応じて色を変化させる
+    redStart = Math.min(255, redStart + scrollPosition / 5);  // スタートカラーの赤を変化
+    blueEnd = Math.max(0, blueEnd - scrollPosition / 5);      // エンドカラーの青を変化
+
+    // グラデーションを更新
+    document.body.style.background = `linear-gradient(to right, rgb(${redStart}, ${greenStart}, ${blueStart}), rgb(${redEnd}, ${greenEnd}, ${blueEnd}))`;
+  }
 });
 
