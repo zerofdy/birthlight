@@ -122,7 +122,7 @@ nav ul li a {
   max-width: 100%;
   height: auto;
   margin-top: auto;
-  padding-top: 100px;  /* ヘッダー分の余白 */
+  padding-top: 300px;
 }
 
 .hero img.visible {
