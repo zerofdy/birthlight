@@ -29,7 +29,7 @@ header {
   align-items: center; /* 縦方向の位置を揃える */
   padding: 20px;
   background: linear-gradient(315deg, #ffcc70, #ff7e5f); /* 夕焼けのイメージ */
-  transition: background-color 0.5s ease;
+  transition: background 0.5s ease; /* 背景色の変化を滑らかに */
   position: fixed;
   width: 100%;
   z-index: 100;
