@@ -78,9 +78,8 @@ document.addEventListener("scroll", function () {
     }
   }
 
-
-
-    heroImg.classList.add('visible');
+  const heroImg = document.querySelector('.hero img');
+  heroImg.classList.add('visible');
 
 });
 
