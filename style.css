@@ -16,7 +16,7 @@ body {
 /* Header */
 header {
   display: flex;
-  justify-content: flex-start; /* 左寄せに配置 */
+  justify-content: space-between; /* 要素間のスペースを均等に */
   align-items: center; /* 縦方向の位置を揃える */
   padding: 20px;
   background-color: #fffff0;
@@ -25,10 +25,10 @@ header {
   z-index: 100;
 }
 
+/* ロゴとテキスト */
 .logo {
   display: flex; /* 画像とテキストを横並びに */
-  align-items: center; /* 画像とテキストの縦方向の位置を揃える */
-  margin-right: 20px; /* ロゴとナビゲーションの間にスペース */
+  align-items: center; /* 縦方向の位置を中央に揃える */
 }
 
 .logo img {
@@ -40,20 +40,24 @@ header {
 .logo span {
   font-size: 24px; /* テキストのサイズ */
   color: #000; /* テキストの色 */
+  margin-right: 30px; /* ロゴとナビゲーションの間の余白 */
 }
 
+/* ナビゲーション */
 nav {
   display: flex;
-  align-items: center; /* メニューアイテムを中央に揃える */
+  align-items: center; /* メニューアイテムを縦方向に中央揃え */
 }
 
 nav ul {
   list-style: none;
-  display: flex;
+  display: flex; /* メニューアイテムを横並びに */
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-  margin-left: 20px;
+  margin-left: 20px; /* メニューアイテム同士の余白 */
 }
 
 nav ul li a {
