@@ -41,8 +41,8 @@ document.addEventListener("scroll", function () {
     let [redEnd, greenEnd, blueEnd] = gradientColors.endColor;
 
     // スクロール量に応じて色を変化させる
-    redStart = Math.min(255, redStart + scrollPosition / 5);  // スタートカラーの赤を変化
-    blueEnd = Math.max(0, blueEnd - scrollPosition / 5);      // エンドカラーの青を変化
+    redStart = Math.min(255, redStart + scrollPosition / 15);  // スタートカラーの赤を変化
+    blueEnd = Math.max(0, blueEnd - scrollPosition / 15);      // エンドカラーの青を変化
 
     // グラデーションを更新
     document.body.style.background = `linear-gradient(to right, rgb(${redStart}, ${greenStart}, ${blueStart}), rgb(${redEnd}, ${greenEnd}, ${blueEnd}))`;
