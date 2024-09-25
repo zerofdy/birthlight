@@ -90,13 +90,13 @@ nav ul li a {
   justify-content: flex-start;  /* テキストを上に寄せる */
   align-items: center;  /* 中央に配置 */
   height: 140vh;  /* Heroセクションの高さを画面いっぱいに */
-  background: url('hero-background.jpg') no-repeat center center/cover;
 }
 
 .hero-content {
   text-align: center;
   padding-top: 50px;  /* テキストの上部に余白を追加 */
 }
+
 
 .hero-content h2 {
   font-size: 50px;
