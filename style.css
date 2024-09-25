@@ -31,7 +31,7 @@ header {
   justify-content: space-between; /* ロゴとナビゲーションを左右に分ける */
   align-items: center; /* 縦方向に中央揃え */
   width: 100%;
-  padding: 20px;
+  padding: 5px;
   box-sizing: border-box;
 }
 
