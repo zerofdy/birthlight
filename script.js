@@ -62,15 +62,15 @@ document.addEventListener("scroll", function () {
     let blueEnd = Math.floor(endColorDay[2] + (endColorNight[2] - endColorDay[2]) * scrollRatio);
 
     // スクロールに基づいてbodyのグラデーションを更新
-    document.body.style.background = `linear-gradient(315deg, rgb(${redStart}, ${greenStart}, ${blueStart}), rgb(${redEnd}, ${greenEnd}, ${blueEnd}))`;
+    document.body.style.background = `linear-gradient(to right, rgb(${redStart}, ${greenStart}, ${blueStart}), rgb(${redEnd}, ${greenEnd}, ${blueEnd}))`;
 
     // スクロールに基づいてヘッダーの背景色も更新
-    document.querySelector("header").style.background = `linear-gradient(315deg, rgb(${redStart}, ${greenStart}, ${blueStart}), rgb(${redEnd}, ${greenEnd}, ${blueEnd}))`;
+    document.querySelector("header").style.background = `linear-gradient(to right, rgb(${redStart}, ${greenStart}, ${blueStart}), rgb(${redEnd}, ${greenEnd}, ${blueEnd}))`;
 
     // スクロール位置がトップに戻ったら、初期グラデーションに戻す
     if (scrollPosition === 0) {
-      document.body.style.background = `linear-gradient(315deg, rgb(${startColorDay.join(",")}), rgb(${endColorDay.join(",")}))`;
-      document.querySelector("header").style.background = `linear-gradient(315deg, rgb(${startColorDay.join(",")}), rgb(${endColorDay.join(",")}))`; // ヘッダーの色も初期値に戻す
+      document.body.style.background = `linear-gradient(to right, rgb(${startColorDay.join(",")}), rgb(${endColorDay.join(",")}))`;
+      document.querySelector("header").style.background = `linear-gradient(to right, rgb(${startColorDay.join(",")}), rgb(${endColorDay.join(",")}))`; // ヘッダーの色も初期値に戻す
     }
   }
 });
