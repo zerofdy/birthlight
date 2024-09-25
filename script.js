@@ -79,7 +79,7 @@ document.addEventListener("scroll", function () {
   }
 
 
-  if (2.0 <  window.scrollY) {
+
     heroImg.classList.add('visible');
 
 });
