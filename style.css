@@ -85,15 +85,17 @@ nav ul li a {
 }
 
 .hero {
-  height: 140vh;
-/*  background: url('hero-background.jpg') no-repeat center center/cover;*/
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;  /* 上下に配置 */
+  justify-content: flex-start;  /* テキストを上に寄せる */
+  align-items: center;  /* 中央に配置 */
+  height: 140vh;  /* Heroセクションの高さを画面いっぱいに */
+  background: url('hero-background.jpg') no-repeat center center/cover;
 }
 
 .hero-content {
   text-align: center;
+  padding-top: 50px;  /* テキストの上部に余白を追加 */
 }
 
 .hero-content h2 {
@@ -112,15 +114,15 @@ nav ul li a {
 .hero img {
   opacity: 0;  /* 画像を最初は透明に */
   transform: translateY(30px);  /* 少し下に配置 */
-  transition: opacity 1s ease, transform 1s ease;  /* フェードインとスライドインの効果 */
-  width: 50%;  /* 画像サイズを50%に設定 */
-  max-width: 100%;  /* 画像の最大幅を100%に制限 */
-  height: auto;  /* 画像の縦横比を保持 */
+  transition: opacity 1s ease, transform 1s ease;  /* フェードインとスライドイン */
+  width: 50%;  /* 画像の幅を50%に設定 */
+  max-width: 100%;  /* 最大幅を100%に制限 */
+  height: auto;  /* 縦横比を保持 */
 }
 
 .hero.visible img {
-  opacity: 1;  /* フェードイン */
-  transform: translateY(0);  /* 元の位置に */
+  opacity: 1;  /* 画像をフェードイン */
+  transform: translateY(0);  /* 元の位置に戻す */
 }
 
 .parallax {
