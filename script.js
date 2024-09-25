@@ -36,7 +36,6 @@ document.addEventListener("scroll", function () {
   });
 
   const gradientColors = getInitialGradientColors();
-
   if (gradientColors) {
     let scrollPosition = window.scrollY;
     let maxScroll = document.body.scrollHeight - window.innerHeight; // スクロールの最大値
@@ -48,8 +47,9 @@ document.addEventListener("scroll", function () {
     let startColorDay = gradientColors.startColor; // CSSから取得した夕焼けのスタートカラー
     let endColorDay = gradientColors.endColor;     // CSSから取得した夕焼けのエンドカラー
 
-    let startColorNight = [25, 25, 112]; // 夜空のスタートカラー（ミッドナイトブルー）
-    let endColorNight = [72, 61, 139];   // 夜空のエンドカラー（ダークスレートブルー）
+    // 淡い夜空の色（少し明るめのブルー系）
+    let startColorNight = [100, 100, 255]; // 淡いミッドナイトブルー
+    let endColorNight = [140, 120, 255];   // 淡いダークスレートブルー
 
     // スクロール位置に応じて色を線形補間
     let redStart = Math.floor(startColorDay[0] + (startColorNight[0] - startColorDay[0]) * scrollRatio);
@@ -60,12 +60,16 @@ document.addEventListener("scroll", function () {
     let greenEnd = Math.floor(endColorDay[1] + (endColorNight[1] - endColorDay[1]) * scrollRatio);
     let blueEnd = Math.floor(endColorDay[2] + (endColorNight[2] - endColorDay[2]) * scrollRatio);
 
-    // スクロールに基づいてグラデーションを更新
+    // スクロールに基づいてbodyのグラデーションを更新
     document.body.style.background = `linear-gradient(315deg, rgb(${redStart}, ${greenStart}, ${blueStart}), rgb(${redEnd}, ${greenEnd}, ${blueEnd}))`;
+
+    // スクロールに基づいてヘッダーの背景色も更新（bodyのスタートカラーを使用）
+    document.querySelector("header").style.backgroundColor = `rgb(${redStart}, ${greenStart}, ${blueStart})`;
 
     // スクロール位置がトップに戻ったら、初期グラデーションに戻す
     if (scrollPosition === 0) {
       document.body.style.background = `linear-gradient(315deg, rgb(${startColorDay.join(",")}), rgb(${endColorDay.join(",")}))`;
+      document.querySelector("header").style.backgroundColor = `rgb(${startColorDay.join(",")})`; // ヘッダーの色も初期値に戻す
     }
   }
 });
