@@ -54,11 +54,11 @@ document.addEventListener("scroll", function () {
     let blueEnd = blueEndInitial - (blueEndInitial) * scrollRatio;           // 初期値から0に向かって変化
 
     // スクロールに基づいてグラデーションを更新
-    document.body.style.background = `linear-gradient(45deg, rgb(${redStart}, ${greenStartInitial}, ${blueStartInitial}), rgb(${redEndInitial}, ${greenEndInitial}, ${blueEnd}))`;
+    document.body.style.background = `linear-gradient(315deg, rgb(${redStart}, ${greenStartInitial}, ${blueStartInitial}), rgb(${redEndInitial}, ${greenEndInitial}, ${blueEnd}))`;
 
     // スクロール位置がトップに戻ったら、初期グラデーションに戻す
     if (scrollPosition === 0) {
-      document.body.style.background = `linear-gradient(45deg, rgb(${redStartInitial}, ${greenStartInitial}, ${blueStartInitial}), rgb(${redEndInitial}, ${greenEndInitial}, ${blueEndInitial}))`;
+      document.body.style.background = `linear-gradient(315deg, rgb(${redStartInitial}, ${greenStartInitial}, ${blueStartInitial}), rgb(${redEndInitial}, ${greenEndInitial}, ${blueEndInitial}))`;
     }
   }
 });
