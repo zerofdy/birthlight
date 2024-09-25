@@ -22,6 +22,10 @@ function getInitialGradientColors() {
 window.addEventListener("load", function () {
   gsap.from(".hero-content h2", { duration: 1, y: 50, opacity: 0 });
   gsap.from(".hero-content p", { duration: 1.5, y: 50, opacity: 0, delay: 0.5 });
+  
+  const heroImg = document.querySelector('.hero img');
+  heroImg.classList.add('visible');  // 強制的にクラスを追加して画像が表示されるか確認
+
 });
 
 document.addEventListener("scroll", function () {
