@@ -73,6 +73,8 @@ document.addEventListener("scroll", function () {
       document.querySelector("header").style.background = `linear-gradient(to right, rgb(${startColorDay.join(",")}), rgb(${endColorDay.join(",")}))`; // ヘッダーの色も初期値に戻す
     }
   }
+  const heroText = document.querySelector('.hero-content');
+  const heroImg = document.querySelector('.hero img');
   
   const heroTop = heroImg.getBoundingClientRect().top;
   const windowHeight = window.innerHeight;
