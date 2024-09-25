@@ -42,6 +42,11 @@ header {
 }
 
 .logo img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  max-height: none;
   width: auto; /* 幅は自動で調整 */
   height: 80px; /* 高さを80pxに設定して、ロゴを大きくする */
 }
