@@ -44,14 +44,14 @@ document.addEventListener("scroll", function () {
     let [redStartInitial, greenStartInitial, blueStartInitial] = gradientColors.startColor;
     let [redEndInitial, greenEndInitial, blueEndInitial] = gradientColors.endColor;
 
-    // スクロールに応じて色を計算（初期値から変化）
-    let redStart = redStartInitial * (1 - scrollRatio) + 255 * scrollRatio;  // 赤色の変化（初期値から255に向かう）
-    let blueEnd = blueEndInitial * (1 - scrollRatio) + 0 * scrollRatio;      // 青色の変化（初期値から0に向かう）
+    // スクロール位置に応じて色を計算
+    let redStart = redStartInitial + (255 - redStartInitial) * scrollRatio;  // 初期値から255に向かって変化
+    let blueEnd = blueEndInitial - (blueEndInitial) * scrollRatio;           // 初期値から0に向かって変化
 
-    // グラデーションを更新
+    // スクロールに基づいてグラデーションを更新
     document.body.style.background = `linear-gradient(to right, rgb(${redStart}, ${greenStartInitial}, ${blueStartInitial}), rgb(${redEndInitial}, ${greenEndInitial}, ${blueEnd}))`;
 
-    // スクロール位置がトップに戻った時も、スクロールの比率で初期色に向かって戻す
+    // スクロール位置がトップに戻ったら、初期グラデーションに戻す
     if (scrollPosition === 0) {
       document.body.style.background = `linear-gradient(to right, rgb(${redStartInitial}, ${greenStartInitial}, ${blueStartInitial}), rgb(${redEndInitial}, ${greenEndInitial}, ${blueEndInitial}))`;
     }
