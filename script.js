@@ -74,7 +74,7 @@ document.addEventListener("scroll", function () {
     }
   }
   
-  const heroSection = document.querySelector('.hero'); // Heroセクションを取得
+  const heroSection = document.querySelector('.hero');  // Heroセクションを取得
   const scrollPosition = window.scrollY + window.innerHeight;
 
   const heroTop = heroSection.offsetTop;
