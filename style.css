@@ -42,9 +42,8 @@ header {
 }
 
 .logo img {
-  width: auto; /* ロゴ画像の幅を調整 */
-  height: auto;
-  margin-right: 10px; /* ロゴとテキストの間にスペース */
+  width: auto; /* 幅は自動で調整 */
+  height: 80px; /* 高さを80pxに設定して、ロゴを大きくする */
 }
 
 .logo {
