@@ -94,6 +94,7 @@ nav ul li a {
 }
 
 .hero-content {
+  margin-bottom: auto;  /* テキストを上部に固定 */
   text-align: center;
   padding-top: 100px;  /* テキストの上部に余白を追加 */
 }
@@ -113,6 +114,7 @@ nav ul li a {
 }
 
 .hero img {
+  margin-top: auto;  /* 画像を中央に配置 */
   opacity: 0;  /* 画像を最初は透明に */
   transform: translateY(30px);  /* 少し下に配置 */
   transition: opacity 1s ease, transform 1s ease;  /* フェードインとスライドイン */
